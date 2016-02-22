@@ -1,6 +1,6 @@
 cd 'c:/users/lab/desktop/simu'
-X=load('data3x.txt');
-y=load('data3y.txt');
+X=load('data_x.txt');
+y=load('data_y.txt');
 m=length(y);
 J_of_predict=zeros(3,1);
 fprintf('ploting data ... \n');
@@ -32,7 +32,7 @@ fminunc(@(t)(costFunction(t, X, y)), initial_theta, options);
 %}
 
 fprintf('start trying polynomial fuction up to power 4 \n');
-X=load('data3x.txt');
+X=load('data_x.txt');
 % try polynomial function up x^4
 degree=4;
 % find polynomial function power which
@@ -46,7 +46,7 @@ str=['predicted polynomial fuction with X power:',num2str(power)];
 title(str);
 
 
-X=load('data3x.txt');
+X=load('data_x.txt');
 [exp_X]=expFeature(X);
 exp_X=[ones(m,1),exp_X];
 n = size(exp_X,2);
